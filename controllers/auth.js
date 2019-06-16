@@ -7,7 +7,8 @@ const userService = require('../services/user');
 function login(req, res) {
     return authService.authenticate(req.body)
         .then(token => {
-            res.redirect('/');
+            res.cookie('token', token)
+            res.redirect('/')
         })
         .catch(err => {
             res.send({

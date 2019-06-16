@@ -7,6 +7,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var reportsRouter = require('./routes/reports');
 
 var app = express();
 
@@ -23,7 +24,7 @@ app.use(expressLayouts);
 app.set("layout extractScripts", true);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
+app.use('/reports', reportsRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

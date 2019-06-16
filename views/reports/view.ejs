@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Reports</a></li>
+        <li class="breadcrumb-item"><%= report.platform %></li>
+        <li class="breadcrumb-item active" aria-current="page"><%= report.title %></li>
+    </ol>
+    </nav>
+   <div class="report-container flex-row">
+    <div class="report flex-grow-1 flex-shrink-0">
+        <article>
+            <header class="report-header d-flex justify-content-between">
+                <h3>Author: <%= user.username %></h3>
+                <h3>Scammer: <%= report.reported_user %></h3>
+                <h3>Case: #<%= report.id %></h3>
+            </header>
+            <hr>
+            <div class="report-info-container d-flex">
+                <div class="report-info w-100">
+                    <div class="report-content">
+                        <p><%= report.description %></p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div> 
+   </div>
+</div>

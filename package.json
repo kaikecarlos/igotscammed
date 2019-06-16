@@ -21,5 +21,8 @@
     "sequelize": "^4.42.0",
     "sequelize-cli": "^5.4.0",
     "sequelize-values": "^1.1.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^1.0.4"
   }
 }

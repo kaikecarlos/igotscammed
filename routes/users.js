@@ -8,7 +8,14 @@ const authController = require('../controllers/auth');
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
-
+router.get('/:username', (req, res, next) => {
+  var userService = require('../services/user');
+  userService.getUserByName(req.params.username)
+  .then(exists => {
+    if(!exists) res.send(404);
+    res.send({exists})
+  })
+})
 // Auth routes
 router.post('/login', authController.login);
 router.post('/register', authController.register);

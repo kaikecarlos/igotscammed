@@ -14,7 +14,7 @@ const User = sequelize.define('user', {
 
 const Report = sequelize.define('report', {
     title: Sequelize.STRING,
-    reportedUser: Sequelize.STRING,
+    reported_user: Sequelize.STRING,
     platform: Sequelize.STRING,
     date: {
         type: Sequelize.DATE,

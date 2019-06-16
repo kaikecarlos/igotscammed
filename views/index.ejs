@@ -1,1 +1,17 @@
-<h1>Hello World!</h1>
+<div class="container mx-auto my-5">
+    <div class="max-w-sm rounded shadow-lg">
+        <div class="px-8 py-6">
+            <h1 class="text-lg font-semibold">Denuncias Recentes</h1>
+            <% for (var i = 0; i < reports.length; i++) { %>
+                <div class="my-auto">
+                    <a href="#" class="text-blue-500 hover:text-blue-700 text-lg">"<%= reports[i].title  %>"</a>
+                    <p class="text-gray-500 truncate"><%= reports[i].description %></p>
+                    <p class="text-gray-700 text-sm">Platform: <%= reports[i].platform %></p>
+                    <hr class="bg-gray-700"></hr>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
