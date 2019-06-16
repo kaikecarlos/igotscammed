@@ -23,6 +23,7 @@
     "sequelize-values": "^1.1.0"
   },
   "devDependencies": {
-    "tailwindcss": "^1.0.4"
+    "tailwindcss": "^1.0.4",
+    "tailwindcss-card": "^0.1.0"
   }
 }
